@@ -38,5 +38,11 @@ class ArticlelistView(ListView):
 
 
 class ArticleDetailView(DeleteView):
-    template_name = 'blog/article_detail.html'
+    template_name = 'Blog/article_detail.html'
+    queryset = Article.objects.all()
+
+
+class ArticleCreateView(CreateView):
+    template_name = 'Blog/article_create.html'
+    form_class = ArticleForm
     queryset = Article.objects.all()
