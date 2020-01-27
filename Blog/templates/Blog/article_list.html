@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h1>Articles</h1>
 <ul>
-  {% for item in items %}
+  {% for item in object_list %}
   <li>
     <h3>
       {{ item.id }} - <a href="{{ item.get_absolute_url }}">{{ item.name }}</a>
