@@ -29,6 +29,7 @@ urlpatterns = [
     path('social/', social_view, name='social'),
 
     # products url
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls')),
+    path('Blog/', include('Blog.urls'))
 
 ]
