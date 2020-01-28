@@ -45,7 +45,18 @@ class ArticleDetailView(DeleteView):
         id_ = self.kwargs.get("id")
         return get_object_or_404(Article, id=id_)
 
+
 class ArticleCreateView(CreateView):
     template_name = 'Blog/article_create.html'
     form_class = ArticleForm
     queryset = Article.objects.all()
+
+
+class ArticleUpdateView(UpdateView):
+    template_name = 'Blog/article_create.html'
+    form_class = ArticleForm
+    queryset = Article.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Article, id=id_)
